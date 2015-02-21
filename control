@@ -1,0 +1,9 @@
+Package: ru.precisef0x.borbaumovcheat
+Name: Borba Umov Cheat
+Depends: mobilesubstrate
+Version: 0.1
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: Ilya Kambarov <admin@onescript.ru>
+Author: Ilya Kambarov <admin@onescript.ru>
+Section: Tweaks
