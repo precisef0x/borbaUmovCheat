@@ -1,4 +1,3 @@
-#import <substrate.h>
 #import <UIKit/UIKit.h>
 
 NSMutableDictionary *myDict;
@@ -6,7 +5,6 @@ UILabel *myLabel;
 int hastoadd = 0;
 
 %hook QFVC
-
 -(UIView*) contentView
 {
 UIView* r = %orig;
@@ -14,24 +12,18 @@ if(myLabel) { [myLabel setText:[myDict objectForKey:@"currentAnswer"]];
 if(hastoadd) [r addSubview:myLabel];}
 return r;
 }
-
 %end
 
-
 %hook QFGameController
-
 -(void)uploadRoundSucceeded:(id)succeeded
 {
 %orig;
 hastoadd = 0;
 [myLabel removeFromSuperview];
 }
-
 %end
 
-
 %hook QuestionCardView
-
 +(id)questionCardWithQuestion:(id)question
 {
 id r = %orig;
@@ -47,9 +39,7 @@ NSString *answer = [myDict objectForKey:[question description]];
 hastoadd = 1;
 return r;
 }
-
 %end
-
 
 %hook QFQuestion
 +(void)setQuestion:(id)question dict:(id)dict
@@ -58,5 +48,4 @@ return r;
 if(!myDict) myDict = [NSMutableDictionary new];
 [myDict setObject:[dict valueForKey:@"correct"] forKey:[question description]];	
 }
-
 %end
