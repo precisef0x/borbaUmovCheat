@@ -1,9 +1,9 @@
 Package: ru.precisef0x.borbaumovcheat
 Name: Borba Umov Cheat
 Depends: mobilesubstrate
-Version: 0.1
+Version: 0.4
 Architecture: iphoneos-arm
-Description: An awesome MobileSubstrate tweak!
+Description: A cheat for Борьба Умов App. Shows the correct answer right above the question card + glow effect on the correct answer + hide wrong answers
 Maintainer: Ilya Kambarov <admin@onescript.ru>
 Author: Ilya Kambarov <admin@onescript.ru>
 Section: Tweaks
