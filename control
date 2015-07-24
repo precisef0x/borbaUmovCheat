@@ -1,9 +1,16 @@
 Package: ru.precisef0x.borbaumovcheat
 Name: Borba Umov Cheat
 Depends: mobilesubstrate
-Version: 0.4
+Version: 1.0
 Architecture: iphoneos-arm
-Description: A cheat for Борьба Умов App. Shows the correct answer right above the question card + glow effect on the correct answer + hide wrong answers
+Description: Premium + Cheats for Borba Umov
+ Cheats for Borba Umov App:
+ * Activate premium features (set avatar etc.)
+ * Show the correct answer right on the question card
+ * Glow effect on the correct answer
+ * Hide wrong answers
+ Tested with v5.3.2, v6.0.9
+ Configure in the app's preferences menu
 Maintainer: Ilya Kambarov <admin@onescript.ru>
 Author: Ilya Kambarov <admin@onescript.ru>
 Section: Tweaks

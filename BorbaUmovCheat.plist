@@ -1,1 +1,4 @@
-{ Filter = { Bundles = ( "se.feomedia.qkrussia" ); }; }
+{ Filter = { Bundles = ( "se.feomedia.qkrussia" );
+Executables = ("Russia");
+Mode = "Any";
+}; }

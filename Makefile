@@ -1,7 +1,6 @@
 GO_EASY_ON_ME = 1
-export SDKVERSION=8.2
-export THEOS_DEVICE_IP=192.168.20.8
-#export THEOS_DEVICE_IP=192.168.1.10
+export SDKVERSION=8.4
+export THEOS_DEVICE_IP=192.168.1.7
 
 include theos/makefiles/common.mk
 
