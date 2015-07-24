@@ -4,4 +4,9 @@
 - Build with theos
 
 Functions:
-- Instantly shows the correct answer right above the question card
+- Activate premium features
+- Show answer cheat mode
+- Glow correct answer cheat mode
+- Remove wrong answers cheat mode
+
+Configure in the app's preferences menu
