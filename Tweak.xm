@@ -93,65 +93,6 @@ void reloadSwitches()
 {
     UITableViewCell *r = %orig;
     
-    /* if(indexPath.row == cheatIndex)
-    {
-        static NSString *CellIdentifier = @"Cell";
-        UITableViewCell *cell;
-        cell = [[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier]autorelease];
-        cell.showsReorderControl = NO;
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        [[cell contentView] setBackgroundColor:[UIColor clearColor]];
-        [[cell backgroundView] setBackgroundColor:[UIColor clearColor]];
-        [cell setBackgroundColor:[UIColor clearColor]];
-        cell.contentView.bounds = CGRectInset(cell.contentView.frame, -10.0f, 0.0f);
-        //		cell.indentationWidth = r.indentationWidth;
-        [cell.contentView addSubview:[[[[r.contentView subviews] objectAtIndex:0] subviews] objectAtIndex:1]];
-        
-        UILabel* countLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 87, 10)];
-        countLabel.text = @"Показать ответ";
-        countLabel.font=[UIFont boldSystemFontOfSize:11.0];
-        countLabel.textColor=[UIColor whiteColor];
-        countLabel.backgroundColor=[UIColor clearColor];
-        UILabel* countLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(103, 5, 100, 10)];
-        countLabel2.text = @"Скрыть неверные";
-        countLabel2.font=[UIFont boldSystemFontOfSize:11.0];
-        countLabel2.textColor=[UIColor whiteColor];
-        countLabel2.backgroundColor=[UIColor clearColor];
-        UILabel* countLabel3 = [[UILabel alloc] initWithFrame:CGRectMake(216, 5, 80, 10)];
-        countLabel3.text = @"Подсвечивать";
-        countLabel3.font=[UIFont boldSystemFontOfSize:11.0];
-        countLabel3.textColor=[UIColor whiteColor];
-        countLabel3.backgroundColor=[UIColor clearColor];
-        
-        
-        [cell.contentView addSubview:countLabel];
-        [cell.contentView addSubview:countLabel2];
-        [cell.contentView addSubview:countLabel3];
-        
-        
-        switchView = [[UISwitch alloc] initWithFrame:CGRectZero];
-        switchView.frame = CGRectMake(23, 25, 0, 0);
-        [cell.contentView addSubview:switchView];
-        [switchView addTarget:self action:@selector(labelChanged:) forControlEvents:UIControlEventValueChanged];
-        [switchView release];
-        
-        switchView2 = [[UISwitch alloc] initWithFrame:CGRectZero];
-        switchView2.frame = CGRectMake(127, 25, 0, 0);
-        [cell.contentView addSubview:switchView2];
-        [switchView2 addTarget:self action:@selector(hideChanged:) forControlEvents:UIControlEventValueChanged];
-        [switchView2 release];
-        
-        switchView3 = [[UISwitch alloc] initWithFrame:CGRectZero];
-        switchView3.frame = CGRectMake(230, 25, 0, 0);
-        [cell.contentView addSubview:switchView3];
-        [switchView3 addTarget:self action:@selector(glowChanged:) forControlEvents:UIControlEventValueChanged];
-        [switchView3 release];
-        
-        reloadSwitches();
-        
-        return cell;
-    } */
-    
     if(indexPath.row == cheatIndex)
     {
         id img = [self performSelector:@selector(imageNameForSection:) withObject:[NSIndexPath indexPathForRow:0 inSection:0]];
@@ -200,7 +141,7 @@ void reloadSwitches()
         [switchView3 release];
         
         reloadSwitches();
-
+        
         
         
         return cell;
@@ -216,7 +157,6 @@ void reloadSwitches()
     cheatIndex = r;
     return r + 1;
 }
-
 %end
 
 %hook QFGameController
@@ -314,11 +254,9 @@ void reloadSwitches()
     }
     return r;
 }
-
 %end
 
 %hook QFQuestionCard
-
 +(void)addWaterMarkTo:(UIView*)to
 {
     NSDictionary *prefs=[[NSDictionary alloc] initWithContentsOfFile:settingsFile];
@@ -329,7 +267,6 @@ void reloadSwitches()
         if(ololabel)
             [to addSubview:ololabel];
 }
-
 %end
 
 %hook QuestionCardView
@@ -349,8 +286,5 @@ void reloadSwitches()
 %end
 
 %hook Datasource
-
 + (BOOL)isUserPremium { return 1; }
-
-
 %end
