@@ -20,7 +20,7 @@ QFButton *altButton4;
     if (![[NSFileManager defaultManager] fileExistsAtPath:settingsFile])
     {
         NSDictionary *dict = @{@"showlabelenable" : @NO, @"hideenable" : @NO, @"glowenable" : @YES,};
-        [dict writeToFile:settingsFile atomically:YES];
+        [dict writeToFile:settingsFile atomically:NO];
     }
 }
 
@@ -48,12 +48,12 @@ void reloadSwitches()
     if(switchControl.on)
     {
         [plistdict setValue:@YES forKey:@"showlabelenable"];
-        [plistdict writeToFile:settingsFile atomically:YES];
+        [plistdict writeToFile:settingsFile atomically:NO];
     }
     else
     {
         [plistdict setValue:@NO forKey:@"showlabelenable"];
-        [plistdict writeToFile:settingsFile atomically:YES];
+        [plistdict writeToFile:settingsFile atomically:NO];
     }
 }
 
@@ -64,12 +64,12 @@ void reloadSwitches()
     if(switchControl.on)
     {
         [plistdict setValue:@YES forKey:@"hideenable"];
-        [plistdict writeToFile:settingsFile atomically:YES];
+        [plistdict writeToFile:settingsFile atomically:NO];
     }
     else
     {
         [plistdict setValue:@NO forKey:@"hideenable"];
-        [plistdict writeToFile:settingsFile atomically:YES];
+        [plistdict writeToFile:settingsFile atomically:NO];
     }
 }
 
@@ -80,12 +80,12 @@ void reloadSwitches()
     if(switchControl.on)
     {
         [plistdict setValue:@YES forKey:@"glowenable"];
-        [plistdict writeToFile:settingsFile atomically:YES];
+        [plistdict writeToFile:settingsFile atomically:NO];
     }
     else
     {
         [plistdict setValue:@NO forKey:@"glowenable"];
-        [plistdict writeToFile:settingsFile atomically:YES];
+        [plistdict writeToFile:settingsFile atomically:NO];
     }
 }
 
