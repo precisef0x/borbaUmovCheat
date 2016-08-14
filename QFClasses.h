@@ -33,26 +33,10 @@
 
 @end
 
-
-@interface QKCell : UITableViewCell {
-    UIImageView* m_selectView;
-    UIView* pane;
-    id selectDelegate;
-}
-@property(assign) id selectDelegate;
-@property(assign)  UIView* pane;
-+(CGRect)cellFrame;
--(void)touchesMoved:(id)moved withEvent:(id)event;
--(void)touchesBegan:(id)began withEvent:(id)event;
--(void)setSelected:(BOOL)selected animated:(BOOL)animated;
--(id)initWithStyle:(int)style reuseIdentifier:(id)identifier bgName:(id)name delegate:(id)delegate;
-@end
-
-
-@interface QFGamesTableViewCell : QKCell {
+@interface QFGamesTableViewCell : UITableViewCell {
     UIImageView* m_imageView;
 }
 -(void)addIconView:(id)view avatar:(id)avatar;
-
+- (id)initOptionsCell:(id)arg1 imageName:(id)arg2 row:(long long)arg3 nRows:(long long)arg4 hasHeader:(_Bool)arg5 avatarCode:(id)arg6 delegate:(id)arg7;
 -(id)initSearchUserCell:(id)cell imageName:(id)name row:(int)row nRows:(int)rows hasHeader:(BOOL)header avatarCode:(id)code delegate:(id)delegate;
 @end
